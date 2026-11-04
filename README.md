@@ -86,3 +86,12 @@ Rularea repetată este sigură: proprietățile deja existente sunt raportate ș
 
 - Credențialele sunt citite din `.env` cu `python-dotenv`, ca tokenul privat să nu ajungă în repository.
 - Regiunea este transmisă ca enum-ul `Region` (ex. `Region.EU_WEST`). Versiunea 6 a SDK-ului `recombee-api-client` nu mai acceptă string-ul `'eu-west'` și oprește scriptul cu `ValueError: Unknown region given`.
+
+## Laborator 4: ontologie în WebProtégé
+
+[`lab04/pizza_ontology.owl`](lab04/pizza_ontology.owl) este ontologia exportată din WebProtégé (format RDF/XML), construită pornind de la exemplul clasic cu pizza.
+
+- **Clase:** `Pizza` (MargheritaPizza, DiavolaPizza, ProsciuttoPizza), `Topping` (Mozzarella, Pepperoni, Prosciutto), `PizzaBase` (ThinNoSauce, ThinPlusSauce) și `Student`.
+- **Proprietăți de obiect:** `hasTopping`, `isToppingOf`, `hasBase`, `likesPizza`.
+- **Proprietăți de date:** `hasPrice`, `hasCalories`, `hasDiameterCm`, `hasUserHash`.
+- **Indivizi:** `margheritaPizza1`, `diavolaPizza1`, `mozzarella1`, `pepperoni1`, `prosciutto1`, `thinSauceBase1` și `euStudent`. Individul `euStudent` are ca valoare pentru `hasUserHash` hash-ul SHA-256 al emailului instituțional.
