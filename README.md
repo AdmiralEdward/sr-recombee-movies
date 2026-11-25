@@ -95,3 +95,13 @@ Rularea repetată este sigură: proprietățile deja existente sunt raportate ș
 - **Proprietăți de obiect:** `hasTopping`, `isToppingOf`, `hasBase`, `likesPizza`.
 - **Proprietăți de date:** `hasPrice`, `hasCalories`, `hasDiameterCm`, `hasUserHash`.
 - **Indivizi:** `margheritaPizza1`, `diavolaPizza1`, `mozzarella1`, `pepperoni1`, `prosciutto1`, `thinSauceBase1` și `euStudent`. Individul `euStudent` are ca valoare pentru `hasUserHash` hash-ul SHA-256 al emailului instituțional.
+
+## Laborator 5: recomandări content-based cu cosine similarity
+
+Folderul [`lab05`](lab05/) calculează similaritatea dintre produsele Tesco din [`tesco_sample.json`](lab05/tesco_sample.json) pe baza descrierilor (TF-IDF + cosine similarity). Matricea de similaritate este în [`similarity_matrix.csv`](lab05/similarity_matrix.csv), iar perechea de produse evidențiată în [`README.txt`](lab05/README.txt).
+
+```bash
+cd lab05
+pip install -r requirements.txt
+python cosine_similarity_tesco.py
+```
